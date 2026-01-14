@@ -82,7 +82,7 @@ def update_picture(id):
     for index, picture in enumerate(data):
         if picture["id"] == id:
             data[index] = picture_in
-            return jasonify(picture), 201
+            return jsonify(picture), 201
 
     return {"message": "picture not found"}, 404
 
